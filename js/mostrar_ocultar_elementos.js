@@ -2,7 +2,10 @@
 Este script muestra y oculta los botones y el placeholder de cada post-it / nota
 */
 window.addEventListener("DOMContentLoaded", function() {
-  
+  mostrarOcultar();
+});
+
+function mostrarOcultar(){
   var postIts = document.querySelectorAll(".post-it");
 
   postIts.forEach(function(postIt) {
@@ -20,4 +23,4 @@ window.addEventListener("DOMContentLoaded", function() {
       textarea.removeAttribute("placeholder");
     });
   });
-});
+};
