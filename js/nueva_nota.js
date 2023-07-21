@@ -26,9 +26,11 @@ window.addEventListener("DOMContentLoaded", function() {
             // Botones de editar y delete
         var editButton = document.createElement("button");
         editButton.classList.add("boton-edit");
+        editButton.addEventListener('click', editar);
         editButton.textContent = "Editar";
 
         var deleteButton = document.createElement("button");
+        deleteButton.addEventListener('click', eliminar);
         deleteButton.classList.add("boton-delete");
 
         var deleteIcon = document.createElement("i");
@@ -48,8 +50,6 @@ window.addEventListener("DOMContentLoaded", function() {
         container.appendChild(postIt);
         
         mostrarOcultar();
-        editable();
-        eliminable();
     });
 
     function cuantos(){
