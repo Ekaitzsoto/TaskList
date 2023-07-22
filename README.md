@@ -1,6 +1,6 @@
 
 
-# TaskList <img src="https://raw.githubusercontent.com/ekaitzsoto/ekaitzsoto/master/post-it.png" alt="https://github.com/Ekaitzsoto" width="30"/>
+# TaskList <img src="https://raw.githubusercontent.com/ekaitzsoto/ekaitzsoto/master/post-it.png" alt="https://github.com/Ekaitzsoto" width="40"/>
 Programa de Javascript que permite gestionar blocks de notas.
 
 ## Funcionalidades:
