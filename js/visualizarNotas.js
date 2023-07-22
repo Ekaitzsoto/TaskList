@@ -1,10 +1,9 @@
 function visualizarNotas(){
     // Obtener las claves almacenadas en el LocalStorage
-    const keys = Object.keys(localStorage);
-
+    var keys = Object.keys(localStorage);
+    keys = keys.sort();
     keys.forEach(key => {
         const value = localStorage.getItem(key);
-        console.log(`Clave: ${key}, Valor: ${value}`);
         crearNota(key, value);
     });
 }
@@ -13,7 +12,6 @@ function crearNota(clave, valor){
     // div principal
     var postIt = document.createElement("div");
     postIt.classList.add("post-it");
-    console.log(clave.substring(7));
     postIt.id = parseInt(clave.substring(7));
 
     // div content
