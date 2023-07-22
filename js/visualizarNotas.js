@@ -1,15 +1,20 @@
-window.addEventListener("DOMContentLoaded", function() {
-    var boton = document.getElementById("boton-nuevo");
-    boton.addEventListener("click", crearPostIt);
-    visualizarNotas();
-});
+function visualizarNotas(){
+    // Obtener las claves almacenadas en el LocalStorage
+    const keys = Object.keys(localStorage);
 
-function crearPostIt(){
+    keys.forEach(key => {
+        const value = localStorage.getItem(key);
+        console.log(`Clave: ${key}, Valor: ${value}`);
+        crearNota(key, value);
+    });
+}
+
+function crearNota(clave, valor){
     // div principal
     var postIt = document.createElement("div");
     postIt.classList.add("post-it");
-    let numPostIts = cuantos();
-    postIt.id = numPostIts+1;
+    console.log(clave.substring(7));
+    postIt.id = parseInt(clave.substring(7));
 
     // div content
     var content = document.createElement("div");
@@ -19,6 +24,7 @@ function crearPostIt(){
     var textarea = document.createElement("textarea");
     textarea.classList.add("post-it-text");
     textarea.readOnly = true;
+    textarea.value = valor;
 
     content.appendChild(textarea);
         
@@ -54,13 +60,4 @@ function crearPostIt(){
     container.appendChild(postIt);
 
     mostrarOcultar();
-    localStorage.setItem("postIt_"+postIt.id, "");
-}
-
-function cuantos(){
-    let postIts = document.querySelectorAll(".post-it");
-    if(postIts.length > 0){
-        return Number.parseInt(postIts[postIts.length-1].id);
-    }
-    return 0;
 }

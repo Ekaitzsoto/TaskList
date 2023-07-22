@@ -7,6 +7,8 @@ function editar(event){
   button = this;
   postItText.readOnly = !postItText.readOnly;
   if (postItText.readOnly) {
+    console.log(postItText);
+    localStorage.setItem("postIt_"+postIt.id, postItText.value);
     button.textContent = 'Editar';
   } else {
     button.textContent = 'Guardar';

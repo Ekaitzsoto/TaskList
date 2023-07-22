@@ -11,20 +11,17 @@
     color:white;
     font-weight: bold;
     border: #004a91;
-    border-radius: 25px;
+    border-radius: 5px;
     background-color: #004a91;
     padding: 5px;
     cursor: pointer;
+    margin: 5px;
 }
 .btn:hover {
-    border-radius: 25px;
     background-color: #00366b;
-    padding: 5px;
 }
 .btn:active {
-    border-radius: 25px;
     background-color: #00366b;
-    padding: 5px;
 }
 /* Post-its */
 .container {
@@ -63,12 +60,9 @@
 }
 
 .boton-edit, .boton-delete {
-    background: none;
     border: none;
     font-size: 14px;
     cursor: pointer;
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
 }
   
 .post-it-content {
@@ -87,14 +81,13 @@
     text-align: left;
     overflow: auto;
     outline: none;
-
     scrollbar-width: thin;
-    scrollbar-color: #888888 #ffffff;
+    scrollbar-color: #004a91 #ffffff;
 }
 
 /*Webkit del scroll para Chrome y Opera*/
 .post-it-text::-webkit-scrollbar-thumb {
-    background-color: #888888;
+    background-color: #004a91;
     border-radius: 10px;
 }
   .post-it-text::-webkit-scrollbar-track {
