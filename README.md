@@ -1,4 +1,4 @@
-![https://github.com/Ekaitzsoto](https://raw.githubusercontent.com/ekaitzsoto/ekaitzsoto/master/post-it.png)
+![https://github.com/Ekaitzsoto](https://raw.githubusercontent.com/ekaitzsoto/ekaitzsoto/master/post-it.png){:width="300px"}
 
 # TaskList
 Programa de Javascript que permite gestionar blocks de notas.
